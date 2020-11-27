@@ -1,4 +1,4 @@
-FROM koji/image-build
+FROM registry.access.redhat.com/ubi8/ubi
 
 LABEL maintainer="Red Hat, Inc."
 
