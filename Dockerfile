@@ -6,7 +6,7 @@ ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 RUN mkdir -p /var/log/rhsm
 
 #RUN yum -y install libica-tools
-RUN rpm -Uvh libica
-RUN rpm -Uvh openCryptoki
+RUN zypper libica
+RUN zypper openCryptoki
 
 CMD ["tail","-f","/dev/null"]
