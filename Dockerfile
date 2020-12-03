@@ -6,7 +6,7 @@ RUN yum -y install perl
 
 COPY *.rpm /tmp
 
-RUN rpm -ivh /tmp/*.rpm
+RUN rpm -Uvh /tmp/*.rpm
 
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
