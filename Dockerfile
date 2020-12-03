@@ -2,7 +2,7 @@ FROM registry.access.redhat.com/ubi8/ubi
 #FROM registry.suse.com/suse/sles12sp4
 #FROM registry.suse.com/suse/sle15
 
-RUN yum -y install perl
+RUN yum -y install perl openssl
 
 COPY *.rpm /tmp
 
