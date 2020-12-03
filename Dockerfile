@@ -1,12 +1,12 @@
-#FROM registry.access.redhat.com/ubi8/ubi
+FROM registry.access.redhat.com/ubi8/ubi
 #FROM registry.suse.com/suse/sles12sp4
-FROM registry.suse.com/suse/sle15
+#FROM registry.suse.com/suse/sle15
 
-COPY libica-tools-3.5.0-10.5.9.s390x.rpm /tmp
-COPY libica3-3.5.0-10.5.9.s390x.rpm /tmp
+COPY opencryptoki-3.12.1-2.el8.s390x.rpm /tmp  
+COPY libica-3.6.1-2.el8.s390x.rpm /tmp
 
-RUN rpm -ivh /tmp/libica3-3.5.0-10.5.9.s390x.rpm
-RUN rpm -ivh /tmp/libica-tools-3.5.0-10.5.9.s390x.rpm
+RUN rpm -ivh /tmp/opencryptoki-3.12.1-2.el8.s390x.rpm
+RUN rpm -ivh /tmplibica-3.6.1-2.el8.s390x.rpm
 
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
