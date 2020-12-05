@@ -10,12 +10,12 @@ RUN rpm -Uvh --replacepkgs --nodeps --force /tmp/*.rpm
 
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
-RUN chmod 4755 /bin/su
+#RUN chmod 4755 /bin/su
 
 RUN mkdir -p /var/log/rhsm
 
 # ROOTにパスワードをセット
-RUN echo 'root:newpassword' |chpasswd
+#RUN echo 'root:newpassword' |chpasswd
 
 # ユーザを作成
 RUN useradd -u 1002 -g 100 shim
