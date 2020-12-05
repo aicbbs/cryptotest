@@ -20,6 +20,8 @@ RUN useradd newuser
 RUN echo 'newuser:newuserpass' |chpasswd
 RUN echo "newuser    ALL=(ALL)       ALL" >> /etc/sudoers
 
+USER newuser
+
 #ADD *.repo /etc/zypp/repos.d/
 #ADD *.service /etc/zypp/services.d
 
