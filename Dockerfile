@@ -6,7 +6,7 @@ RUN yum -y install perl openssl
 
 COPY *.rpm /tmp
 
-RUN rpm -Uvh --replacepkgs --nodeps /tmp/*.rpm
+RUN rpm -Uvh --replacepkgs --nodeps --force /tmp/*.rpm
 
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
