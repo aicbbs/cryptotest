@@ -12,6 +12,14 @@ ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 RUN mkdir -p /var/log/rhsm
 
+# ROOTにパスワードをセット
+RUN echo 'root:newpassword' |chpasswd
+
+# ユーザを作成
+RUN useradd newuser
+RUN echo 'newuser:newuserpass' |chpasswd
+RUN echo "newuser    ALL=(ALL)       ALL" >> /etc/sudoers
+
 #ADD *.repo /etc/zypp/repos.d/
 #ADD *.service /etc/zypp/services.d
 
