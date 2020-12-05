@@ -28,4 +28,5 @@ USER shim
 #RUN zypper ar libica
 #RUN zypper ar openCryptoki
 
-CMD ["tail","-f","/dev/null"]
+#CMD ["tail","-f","/dev/null"]
+CMD ["/bin/bash"]
