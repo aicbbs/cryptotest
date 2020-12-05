@@ -18,11 +18,9 @@ RUN mkdir -p /var/log/rhsm
 RUN echo 'root:newpassword' |chpasswd
 
 # ユーザを作成
-RUN useradd newuser
-RUN echo 'newuser:newuserpass' |chpasswd
-RUN echo "newuser    ALL=(ALL)       ALL" >> /etc/sudoers
+RUN useradd -u 1002 -g 100 shim
 
-USER newuser
+USER shim
 
 #ADD *.repo /etc/zypp/repos.d/
 #ADD *.service /etc/zypp/services.d
