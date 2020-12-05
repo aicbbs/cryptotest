@@ -18,9 +18,13 @@ RUN mkdir -p /var/log/rhsm
 #RUN echo 'root:newpassword' |chpasswd
 
 # ユーザを作成
-RUN useradd -u 1002 -g 100 shim
+RUN useradd -u 1002 -g 100 newuser 
 
-USER shim
+USER newuser
+
+RUN id
+RUN icainfo
+RUN icastats
 
 #ADD *.repo /etc/zypp/repos.d/
 #ADD *.service /etc/zypp/services.d
@@ -28,5 +32,5 @@ USER shim
 #RUN zypper ar libica
 #RUN zypper ar openCryptoki
 
-#CMD ["tail","-f","/dev/null"]
-CMD ["/bin/bash"]
+CMD ["tail","-f","/dev/null"]
+#CMD ["/bin/bash"]
