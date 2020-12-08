@@ -14,7 +14,7 @@ ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 RUN mkdir -p /var/log/rhsm
 #RUN modprobe ap
-RUN lsmod
+#RUN lsmod
 RUN lszcrypt
 
 # ROOTにパスワードをセット
@@ -28,7 +28,7 @@ USER newuser
 RUN id
 RUN icainfo
 RUN icastats
-RUN lsmod
+#RUN lsmod
 RUN lszcrypt
 
 #ADD *.repo /etc/zypp/repos.d/
