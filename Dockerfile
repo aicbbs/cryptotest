@@ -13,7 +13,7 @@ ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 #RUN chmod 4755 /bin/su
 
 RUN mkdir -p /var/log/rhsm
-RUN modprobe ap
+#RUN modprobe ap
 RUN lsmod
 RUN lszcrypt
 
